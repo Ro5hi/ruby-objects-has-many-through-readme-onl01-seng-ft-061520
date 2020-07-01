@@ -17,6 +17,27 @@ class Customer
     Meal.new(waiter, self, total, tip)
   end 
   
+  def new_meal_20_percent(waiter, total)
+    tip = total * 0.new_meal_20_percentMeal.new(waiter, self, total, tip)
+  end 
+  
+  def self.oldset_customer
+    oldest_age = 0
+    oldest_customer = nil 
+    self.all.each do 
+      |customer|
+      if customer.age > oldest_age 
+        oldest_age = 
+        customer.age 
+        oldest_customer = 
+        customer 
+      end 
+    end 
+    oldest_customer
+  end 
+  
+end 
+  
   def meals
     Meal.all.select do |meal| 
       meal.customer == self 
