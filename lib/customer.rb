@@ -36,7 +36,7 @@ class Customer
     oldest_customer
   end 
   
-end 
+
   
   def meals
     Meal.all.select do |meal| 
